@@ -1,0 +1,6 @@
+- hosts: all
+  become: yes
+  tasks:
+    - name: Install calico pod network
+      become: false
+      command: kubectl apply -f https://docs.projectcalico.org/v3.11/manifests/calico.yaml
